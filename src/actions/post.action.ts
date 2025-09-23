@@ -4,7 +4,6 @@ import prisma from "@/lib/prisma";
 import { getDatabaseUserId } from "./user.action";
 import { revalidatePath } from "next/cache";
 import { error } from "console";
-import { threadId } from "worker_threads";
 
 export const createPost = async (content: string, imageUrl: string) => {
     try {
