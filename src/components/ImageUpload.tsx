@@ -20,6 +20,7 @@ const ImageUpload = ({ endpoint, onChange, value }: ImageUploadProps) => {
                     src={value}
                     alt="uploaded image"
                     className="rounded-md size-40 object-cover"
+                    loading="lazy"
                 />
                 <button
                     onClick={() => onChange("")}

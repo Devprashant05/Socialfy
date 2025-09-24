@@ -130,6 +130,7 @@ const Notifications = () => {
                                                             }
                                                             alt="Post content"
                                                             className="mt-2 rounded-md w-full max-w-[200px] h-auto object-cover"
+                                                            loading="lazy"
                                                         />
                                                     )}
                                                 </div>

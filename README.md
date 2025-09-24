@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Socialfy - Social Media App 🌐</h1>
+<p>A modern social media application built with Next.js, Prisma, Neon, Clerk, UploadThing, and shadcn/ui.</p>
 
-## Getting Started
+![Demo App](/public/preview.png)
 
-First, run the development server:
+## 🚀 Live Demo
+
+https://socialfy-seven.vercel.app/
+
+## 🛠 Tech Stack
+
+**FRONTEND:** Next JS, TailwindCSS, ShadCN/UI
+
+**Database/ORM:** Neon DB, Prisma
+
+**Other Tools:** Clerk, UploadThings
+
+## ✨ Features
+
+-   🔑 User Authentication
+-   📝 Create, and delete posts
+-   👤 Edit profile
+-   📜 💬 Like, comment, notification functionality
+-   ⚡ Modern UI powered by shadcn/ui
+
+## Installation
+
+### Clone the repo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Devprashant05/Socialfy.git
+
+cd your-repo-name
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Setup .env in root:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_next_public_clerk_key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+CLERK_SECRET_KEY=your_clerk_key
 
-## Learn More
+DATABASE_URL=your_db_url
 
-To learn more about Next.js, take a look at the following resources:
+UPLOADTHING_TOKEN=your_upload_thing_token
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Run Project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+    npm install
+    npx prisma migrate dev
+    npm run dev
+```
 
-## Deploy on Vercel
+## Learnings from this Project
+- Learned Next.js App Router & Server Actions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Hands-on with Prisma schema & DB migrations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Auth flows with Clerk
+
+- File handling with UploadThing
+
+- Building a consistent UI with shadcn/ui
+
+## 🤝 Contributing
+
+<p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
+
+## Feedback
+
+If you have any feedback, please reach out to us at devprashant0305@gmail.com
