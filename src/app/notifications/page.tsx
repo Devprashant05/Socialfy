@@ -123,7 +123,7 @@ const Notifications = () => {
                                                     </p>
                                                     {notification.post
                                                         ?.image && (
-                                                        <Image
+                                                        <img
                                                             src={
                                                                 notification
                                                                     .post.image

@@ -5,6 +5,7 @@ import {
     getUserPosts,
     updateUserProfile,
 } from "@/actions/profile.action";
+import { toggleFollow } from "@/actions/user.action";
 import PostCard from "@/components/PostCard";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -82,6 +83,7 @@ const ProfilePageClient = ({
         try {
             setIsUpdatingFollow(true);
             setIsFollowing(!isFollowing);
+            await toggleFollow(user.id);
         } catch (error) {
             toast.error("Failed to update follow status");
         } finally {

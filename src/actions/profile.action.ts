@@ -7,7 +7,6 @@ import { revalidatePath } from "next/cache";
 import { getDatabaseUserId } from "./user.action";
 
 export const getProfileByUsername = async (username: string) => {
-    console.log("username in action", username);
     try {
         const user = await prisma.user.findUnique({
             where: {
