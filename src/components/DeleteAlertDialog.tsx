@@ -14,10 +14,10 @@ import { Button } from "./ui/button";
 import { Loader2Icon, Trash2Icon } from "lucide-react";
 
 interface DeleteAlertDialogProps {
-    isDeleting: false;
+    isDeleting: boolean;
     onDelete: () => Promise<void>;
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
 }
 
 const DeleteAlertDialog = ({
