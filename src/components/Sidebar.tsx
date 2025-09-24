@@ -43,12 +43,12 @@ const Sidebar = async () => {
                                 </p>
                             </div>
                         </Link>
+                        {user.bio && (
+                            <p className="mt-3 text-sm text-muted-foreground">
+                                {user.bio}
+                            </p>
+                        )}
                     </div>
-                    {user.bio && (
-                        <p className="mt-3 text-sm text-muted-foreground">
-                            {user.bio}
-                        </p>
-                    )}
 
                     <div className="w-full">
                         <Separator className="my-4" />

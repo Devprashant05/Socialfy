@@ -81,7 +81,7 @@ export const getRandomUsers = async () => {
                         NOT: {
                             followers: {
                                 some: {
-                                    follwerId: userId,
+                                    followerId: userId,
                                 },
                             },
                         },
@@ -119,8 +119,8 @@ export const toggleFollow = async (targetUserId: string) => {
 
         const existingFollow = await prisma.follows.findUnique({
             where: {
-                follwerId_followingId: {
-                    follwerId: userId,
+                followerId_followingId: {
+                    followerId: userId,
                     followingId: targetUserId,
                 },
             },
@@ -130,8 +130,8 @@ export const toggleFollow = async (targetUserId: string) => {
             // unfollow
             await prisma.follows.delete({
                 where: {
-                    follwerId_followingId: {
-                        follwerId: userId,
+                    followerId_followingId: {
+                        followerId: userId,
                         followingId: targetUserId,
                     },
                 },
@@ -141,7 +141,7 @@ export const toggleFollow = async (targetUserId: string) => {
             await prisma.$transaction([
                 prisma.follows.create({
                     data: {
-                        follwerId: userId,
+                        followerId: userId,
                         followingId: targetUserId,
                     },
                 }),

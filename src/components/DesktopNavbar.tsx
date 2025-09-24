@@ -46,7 +46,7 @@ const DesktopNavbar = async () => {
                         asChild
                     >
                         <Link
-                            href={`/profiles/${
+                            href={`/profile/${
                                 user.username ??
                                 user.emailAddresses[0].emailAddress.split(
                                     "@"

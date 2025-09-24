@@ -93,7 +93,7 @@ const PostCard = ({
         <Card className="overflow-hidden">
             <CardContent className="p-4 sm:p-6">
                 <div className="space-y-4">
-                    <div className="flex gap-3 sm:gap-4">
+                    <div className="flex space-x-3 sm:space-x-4">
                         <Link href={`/profile/${post.author.username}`}>
                             <Avatar className="size-8 sm:size-10">
                                 <AvatarImage

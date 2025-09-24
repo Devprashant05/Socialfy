@@ -84,16 +84,16 @@ model Like {
 }
 
 model Follows {
-  follwerId String
+  followerId String
   followingId String
   createdAt DateTime @default(now()) 
 
   // Relations
-  follower User @relation("follower",  fields: [follwerId], references: [id], onDelete: Cascade)
+  follower User @relation("follower",  fields: [followerId], references: [id], onDelete: Cascade)
   following User @relation("following", fields: [followingId], references: [id], onDelete: Cascade)
 
-  @@index([follwerId, followingId])
-  @@id([follwerId, followingId]) // composite primary key that prevents duplicate follows
+  @@index([followerId, followingId])
+  @@id([followerId, followingId]) // composite primary key that prevents duplicate follows
 
 }
 
